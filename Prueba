@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+typedef int Num
 int main()
 {
   cout<<"Hello World";
