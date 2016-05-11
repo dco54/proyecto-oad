@@ -1,0 +1,33 @@
+#include  <pthread.h>
+#include  <stdlib.h>
+#include  <unistd.h>
+#include  <stdio.h>
+ 
+pthread_mutex_t ptmutex1;
+ 
+// imprime .
+void *thread_function01(void *arg) {
+    
+ 
+    pthread_mutex_lock(&ptmutex1);  
+ 
+    for (int i=0; i<5; i++) {
+        printf(".");
+        fflush(stdout);
+        sleep(1);
+    }
+    pthread_mutex_unlock(&ptmutex1);
+ 
+    return NULL;
+}
+// imprime 0
+void *thread_function02(void *arg) {
+    
+ 
+    pthread_mutex_lock(&ptmutex1);
+    for (int i=0; i<5; i++) {
+ 
+        printf("o");
+        fflush(stdout);
+        sleep(1);
+ 
