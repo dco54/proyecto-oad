@@ -22,7 +22,6 @@ void *thread_function01(void *arg) {
 }
 // imprime 0
 void *thread_function02(void *arg) {
-    
  
     pthread_mutex_lock(&ptmutex1);
     for (int i=0; i<5; i++) {
