@@ -24,7 +24,7 @@
 #include <vtkDelaunay2D.h>
 #include <vtkXMLPolyDataWriter.h>
 #include <vtkLookupTable.h>
-#include <vtkElevationFilter.h>
+#include <vtkElevationFilter.h> 
 #include <vtkCommand.h>
 #include "gauss.h"
 #include "vtkWarpScalar.h"
