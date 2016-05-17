@@ -28,4 +28,4 @@
 #include <vtkCommand.h>
 #include "gauss.h"
 #include "vtkWarpScalar.h"
-
+  
