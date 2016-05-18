@@ -11,8 +11,8 @@ MainWindow::MainWindow(QWidget *parent) :
     graficadora = new tabulador;
     graficadora->range_negative=range_x_ne;
     graficadora->range_positive=range_x;
-    // Note: we could have also just called customPlot->rescaleAxes(); instead
-    // Allow user to drag axis ranges with mouse, zoom with mouse wheel and select graphs by clicking:
+   
+    
     ui->customPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectPlottables);
     qDebug() << "Valor RANGO X NEGATIVO:" <<this->range_x_ne<<"Valor RANGO X POSITIVO:"<<this->range_x;
 }
@@ -39,13 +39,13 @@ void MainWindow::on_pushButton_clicked()
                 qDebug() << "Valor eje x:" <<x[i]<<"Valor eje y :"<<y[i];
         }
     }
-    // create graph and assign data to it:
+    
     ui->customPlot->addGraph();
     ui->customPlot->graph(0)->setData(x,y);
-    // give the axes some labels:
+   
     ui->customPlot->xAxis->setLabel("x");
     ui->customPlot->yAxis->setLabel("y");
-    // set axes ranges, so we see all data:
+    
     ui->customPlot->xAxis->setRange(range_x_ne, range_x);
     ui->customPlot->yAxis->setRange(range_x_ne, range_x);
     ui->customPlot->replot();
