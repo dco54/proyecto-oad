@@ -25,7 +25,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QVector<double> x(tam_x), y(tam_y); // initialize with entries 0..100
+    QVector<double> x(tam_x), y(tam_y);
     qDebug() << "TABULADOR DE LA GRAFICADORA";
     graficadora->reconoce_funcion(ui->line_edit_funcion->text().toStdString());
     if(graficadora->getEstado()==false){
