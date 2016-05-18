@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+Typedef int
 class CVector {
   public:
     int x,y;
