@@ -16,10 +16,12 @@ int main()
  
   vtkSmartPointer<vtkPolyDataMapper> cylinderMapper =
     vtkSmartPointer<vtkPolyDataMapper>::New();
+    
   cylinderMapper->SetInputConnection(cylinder->GetOutputPort());
  
   vtkSmartPointer<vtkActor> cylinderActor =
     vtkSmartPointer<vtkActor>::New();
+    
   cylinderActor->SetMapper(cylinderMapper);
   cylinderActor->GetProperty()->SetColor(1.0000, 0.3882, 0.2784);
   cylinderActor->RotateX(30.0);
