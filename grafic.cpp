@@ -76,6 +76,7 @@ tabulador::tabulador()
    arrays_x = new double[1050];
    arrays_y  = new double[1050];
 }
+
 tabulador::~tabulador()
 {
   delete[] arrays_x;
@@ -123,6 +124,7 @@ void tabulador::funcion_constante(){
     }
     }
 }
+
 void tabulador::funcion_cuadratica(){
     double valor_x_cuadratico=0;
     double valor_x=0;
@@ -140,6 +142,7 @@ void tabulador::funcion_cuadratica(){
             }
     }
 }
+
 void tabulador::funcion_lineal(){
     if(lineal==true){
          for (int i=0; i<1001; ++i)
