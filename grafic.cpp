@@ -109,6 +109,7 @@ void tabulador::reconoce_funcion(std::string funcion){
                   }
         }
 }
+
 void tabulador::funcion_constante(){
     if(constante==true){
     for (int i=0; i<1001; ++i)
@@ -118,19 +119,6 @@ void tabulador::funcion_constante(){
         if(((i/10.0)-50>=range_negative)){
                 *(arrays_x+i)=(i/10.0)-50;
                 *(arrays_y+i)=valor_C;
-        }
-    }
-    }
-}
-void tabulador::funcion_lineal(){
-    if(lineal==true){
-         for (int i=0; i<1001; ++i)
-    {
-        if((i/10.0)-50>range_positive)
-            break;
-        if(((i/10.0)-50>=range_negative)){
-           *(arrays_x+i)=(i/10.0)-50;
-           *(arrays_y+i)=valor_M*(*(arrays_x+i))+valor_C;
         }
     }
     }
@@ -152,7 +140,16 @@ void tabulador::funcion_cuadratica(){
             }
     }
 }
-double tabulador::redondear(double Num, int nDec)
-{
-  return ((float)((int)(Num * pow(10, nDec) + 0.5))) / pow(10, nDec);
+void tabulador::funcion_lineal(){
+    if(lineal==true){
+         for (int i=0; i<1001; ++i)
+    {
+        if((i/10.0)-50>range_positive)
+            break;
+        if(((i/10.0)-50>=range_negative)){
+           *(arrays_x+i)=(i/10.0)-50;
+           *(arrays_y+i)=valor_M*(*(arrays_x+i))+valor_C;
+        }
+    }
+    }
 }
